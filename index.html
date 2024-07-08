@@ -126,6 +126,15 @@
   </div>
 </section>
 
+<style>
+  .hero teaser figcaption {
+    font-size: 1em; /* Font size for the caption */
+    margin-top: 10px; /* Margin above the caption */
+    color: #666; /* Color for the caption text */
+  }
+
+</style>
+
 <!-- End Pipeline image -->
 <!-- Persona Agents -->
 <section class="section persona-agents">
@@ -135,6 +144,7 @@
         <h1 class="title is-1 has-text-centered">Persona Agents</h1>
         <div class="image-container has-text-centered">
           <img src="static/images/teaser.jpg" alt="Descriptive Alt Text" class="image">
+          <figcaption> Comparison of responses to two questions between a general LLM (GPT 3.5 in this case) with no persona defined and the same LLM role-playing as \textit{"a cowboy"}.</figcaption>
         </div>
         <div class="content has-text-justified">
           <p>
@@ -163,6 +173,11 @@
   .persona-agents .image {
     max-width: 30%; /* Ensure the image is responsive */
     height: auto;
+  }
+  .persona-agents figcaption {
+    font-size: 1em; /* Font size for the caption */
+    margin-top: 10px; /* Margin above the caption */
+    color: #666; /* Color for the caption text */
   }
   .persona-agents p {
     font-size: 1.2em; /* Increased font size for the paragraph */
