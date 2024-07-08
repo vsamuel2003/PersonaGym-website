@@ -269,8 +269,12 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
         </div>
         <div class="content has-text-centered">
           <p>
-            Our Analysis suggests a.) <strong>GEO</strong> is more helpful if optimization methods are made for target domain, b.) <strong>GEO</strong> will benefit websites lower ranked in search engine more in the future.
+            We make the following observations:
           </p>
+          <ul>
+            <li><strong>The capacity of the model is positively correlated with the model's ability to be persona agents.</strong> This suggests that larger, more complex models may be better suited for tasks requiring the embodiment of specific personas or the simulation of distinct personalities.</li>
+            <li><strong>Not all SOTA LLMs are inclined to be persona agents.</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents. This finding should provide caution for future studies to carefully study the ability for all SOTA LLMs to be persona agents before deployment instead of assuming persona agent capabilities.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -291,13 +295,20 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
     line-height: 1.5; /* Line height for better readability */
     margin-bottom: 20px; /* Margin below each paragraph */
   }
+  .results-summary .content ul {
+    list-style-type: disc; /* Custom bullet points */
+    margin-left: 20px; /* Indent the list */
+    font-size: 1.2em; /* Font size for list items */
+    line-height: 1.5; /* Line height for list items */
+  }
+  .results-summary .content ul li {
+    margin-bottom: 10px; /* Space between list items */
+  }
   .results-summary .image-container {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
     margin: 20px 0; /* Margin to add space around the image */
   }
   .results-summary .image {
-    max-width: 80%; /* Ensure the image is responsive */
+    max-width: 100%; /* Ensure the image is responsive */
     height: auto;
   }
 </style>
