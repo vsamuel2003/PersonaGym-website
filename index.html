@@ -267,6 +267,9 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
         <div class="image-container has-text-centered">
           <img src="static/images/main_results.jpg" alt="Results Summary Chart" class="image">
         </div>
+        <div class="image-container has-text-centered">
+          <img src="static/images/correlations.jpg" alt="correlations" class="image">
+        </div>
         <div class="content has-text-left">
           <p>
             We make the following observations:
@@ -274,6 +277,7 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
           <ul>
             <li><strong>The capacity of the model is positively correlated with the model's ability to be persona agents.</strong> This suggests that larger, more complex models may be better suited for tasks requiring the embodiment of specific personas or the simulation of distinct personalities.</li>
             <li><strong>Not all SOTA LLMs are inclined to be persona agents.</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents. This finding should provide caution for future studies to carefully study the ability for all SOTA LLMs to be persona agents before deployment instead of assuming persona agent capabilities.</li>
+            <li><strong>PersonaGym is highly aligned with human judgement</strong> We show that the scores for all tasks and PersonaScore are highly correlated with human judgement thereby showing the efficacy of our framework </li>
           </ul>
         </div>
       </div>
