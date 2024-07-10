@@ -42,6 +42,31 @@
       background-color: black;
       color: white;
     }
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .leaderboard-table th, .leaderboard-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    .leaderboard-table th {
+      background-color: #f2f2f2;
+      text-align: left;
+    }
+    .leaderboard-table td {
+      text-align: center;
+    }
+    .leaderboard-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .leaderboard-table tr:hover {
+      background-color: #ddd;
+    }
+    .leaderboard-table .icon {
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +78,56 @@
         <div class="column has-text-centered">
           <a href="index.html" class="button home-button is-rounded">Back to Home</a>
           <h1 class="title is-1 publication-title">PersonaGym Leaderboard</h1>
+
+          <!-- Leaderboard Table -->
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>% Resolved</th>
+                <th>Date</th>
+                <th>Logs</th>
+                <th>Trajs</th>
+                <th>Site</th>
+                <th>Verified?</th>
+                <th>Open?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Factory Code Droid</td>
+                <td>19.27</td>
+                <td>2024-06-17</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>-</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>✗</td>
+                <td>✗</td>
+              </tr>
+              <tr>
+                <td>AutoCodeRover (v20240620) + GPT 4o (2024-05-13)</td>
+                <td>18.83</td>
+                <td>2024-06-28</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>-</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>✗</td>
+                <td>✗</td>
+              </tr>
+              <tr>
+                <td>AppMap Navie + GPT 4o (2024-05-13)</td>
+                <td>14.60</td>
+                <td>2024-06-15</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>-</td>
+                <td><i class="fas fa-link"></i></td>
+                <td>✓</td>
+                <td>✓</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+
           <div class="is-size-5 publication-authors">
             <p>This is where you can add the leaderboard information, charts, or tables that you want to display on this page.</p>
             <div class="leaderboard-section">
