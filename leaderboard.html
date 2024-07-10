@@ -18,6 +18,25 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <style>
+    .leaderboard-section {
+      border: 1px solid black;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .leaderboard-section h2 {
+      font-size: 1.5em;
+    }
+    .leaderboard-section p, .leaderboard-section ul, .leaderboard-section li, .leaderboard-section ol {
+      font-size: 0.9em;
+    }
+    .home-button {
+      margin-bottom: 20px;
+      background-color: black;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,10 +45,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
+          <a href="index.html" class="button home-button is-rounded">Back to Home</a>
           <h1 class="title is-1 publication-title">PersonaGym Leaderboard</h1>
           <div class="is-size-5 publication-authors">
             <p>This is where you can add the leaderboard information, charts, or tables that you want to display on this page.</p>
-            <div class="box">
+            <div class="leaderboard-section">
               <h2 class="subtitle"><strong>Submit to PersonaGym Leaderboard</strong></h2>
               <p>If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
               <ol>
@@ -49,7 +69,7 @@
               <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on PersonaGym.</p>
             </div>
 
-            <div class="box">
+            <div class="leaderboard-section">
               <h2 class="subtitle"><strong>Submission Guidelines</strong></h2>
               <p>Please note that we consider an eligible submission to the PersonaGym Leaderboard to satisfy these criteria:</p>
               <ol>
@@ -58,8 +78,6 @@
                 <li>The result should not be in the "Oracle" retrieval setting. The agent cannot be told the correct files to edit, where "correct" refers to the files modified by the reference solution patch.</li>
               </ol>
             </div>
-
-            <a href="index.html" class="button is-primary is-rounded">Back to Home</a>
           </div>
         </div>
       </div>
