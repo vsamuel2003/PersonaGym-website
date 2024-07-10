@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Leaderboard for PersonaGym">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PersonaGym Leaderboard</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PersonaGym Leaderboard</h1>
+          <div class="is-size-5 publication-authors">
+            <p>This is where you can add the leaderboard information, charts, or tables that you want to display on this page.</p>
+            <div class="box">
+              <h2 class="subtitle"><strong>Submit to PersonaGym Leaderboard</strong></h2>
+              <p>If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
+              <ol>
+                <li>Fork this repository.</li>
+                <li>Under the split that you evaluate on (evaluation/lite/ or evaluation/test), create a new folder with the submission date and the model name (e.g. 20240415_sweagent_gpt4).</li>
+                <li>Within the folder, please include the following files:
+                  <ul>
+                    <li><code>all_preds.jsonl</code>: A JSONL file containing the predictions for the task instances in the split.</li>
+                    <li><code>results.json</code>: A JSON file containing the results of the evaluation, generated with <a href="https://example.com/get_model_report" target="_blank">get_model_report</a>.</li>
+                    <li><code>logs/</code>: A folder containing the execution logs for the model run.</li>
+                    <li><code>trajs/</code>: (For Agent-Based Approaches) A folder containing the trajectories for the model run, such as for SWE-agent.</li>
+                    <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
+                  </ul>
+                </li>
+                <li>Create a pull request to this repository with the new folder.</li>
+              </ol>
+              <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on PersonaGym.</p>
+            </div>
+
+            <div class="box">
+              <h2 class="subtitle"><strong>Submission Guidelines</strong></h2>
+              <p>Please note that we consider an eligible submission to the PersonaGym Leaderboard to satisfy these criteria:</p>
+              <ol>
+                <li>The use of the <code>hints_text</code> field is not allowed. See our explanation <a href="https://example.com/explanation" target="_blank">here</a>.</li>
+                <li>The result should be pass@1. There should be one execution log per task instance for all 2294 task instances.</li>
+                <li>The result should not be in the "Oracle" retrieval setting. The agent cannot be told the correct files to edit, where "correct" refers to the files modified by the reference solution patch.</li>
+              </ol>
+            </div>
+
+            <a href="index.html" class="button is-primary is-rounded">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the design of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
