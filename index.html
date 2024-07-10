@@ -147,7 +147,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            The emergence of persona agents in large language models (LLMs) has introduced a novel approach where the LLM assumes a specified persona, generating responses that align with the experiences and traits of that persona. These <strong>Persona Agents </strong> have the potential to deliver highly personalized and contextually relevant interactions, enhancing user engagement and satisfaction by simulating human-like communication and decision making across a multitude of domains.
+            The emergence of persona agents in large language models (LLMs) has introduced a novel approach where the LLM assumes a specified persona, generating responses that align with the experiences and traits of that persona. These <strong>Persona Agents </strong> have the potential to deliver highly personalized and contextually relevant interactions, enhancing user engagement and satisfaction by simulating human-like communication and decision-making across a multitude of domains.
           </p>
         </div>
       </div>
@@ -194,9 +194,9 @@
         <h1 class="title is-1 has-text-centered">What is PersonaGym?</h1>
         <div class="content has-text-justified">
           <p>
-            <b>PersonaGym</b> is the first dynamic evaluation framework for persona agents. As part of PersonaGym, we evaluate persona agents on the tasks of <b>Action Justification</b>, <b>Expected Action</b>, <b>Linguistic Habits</b>, <b>Persona Consistency</b>, and <b>Toxicity Control</b>.  By dynamic we mean that the for every given persona agent, PersonaGym chooses relevant environments from a list of 150 diverse environments and generates tasks specific questions that is tailored to the given persona as well as the selected environments. The agent's responses to these questions are then automatically evaluated using an ensembel of strong LLM models.  
+            <b>PersonaGym</b> is the first dynamic evaluation framework for persona agents. As part of PersonaGym, we evaluate persona agents on the tasks of <b>Action Justification</b>, <b>Expected Action</b>, <b>Linguistic Habits</b>, <b>Persona Consistency</b>, and <b>Toxicity Control</b>.  By dynamic we mean that for every given persona agent, PersonaGym chooses relevant environments from a list of 150 diverse environments and generates task-specific questions tailored to the given persona and the selected environments. The agent's responses to these questions are then automatically evaluated using an ensemble of strong LLM models.  
 
-Additionally we propose <b>PersonaScore</b> which is the <i>first metric for quantifying the overall capability of persona agents</i>. Our framework provides comprehensive scores across all tasks along with PersonaScore in order to enable <i>multidimensional persona agent evaluation and advancement</i>. 
+Additionally, we propose <b>PersonaScore</b> which is the <i>first metric for quantifying the overall capability of persona agents</i>. Our framework provides comprehensive scores across all tasks along with PersonaScore to enable <i>multidimensional persona agent evaluation and advancement</i>. 
           </p>
         </div>
       </div>
@@ -230,8 +230,8 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
         <h2 class="title is-3 has-text-centered">Key-Highlights</h2>
         <div class="content has-text-justified">
           <ul>
-            <li>📊 <strong>Multidimensional Evaluation for Persona Agents:</strong> PersonaGym allows users to measure the capabilities of arbitrary persona agents on 5 evaluation tasks as well as overall capabilities using PersonScore. These 5 tasks encompass the different dimensions along which persona agents can interact.</li>
-            <li>🧠 <strong>High Levels of Alignment with Human Judgement:</strong> Our experimentations show that PersonaGym is highly correlated with human judgement.</li>
+            <li>📊 <strong>Multidimensional Evaluation for Persona Agents:</strong> PersonaGym allows users to measure the capabilities of arbitrary persona agents on 5 evaluation tasks as well as overall capabilities using PersonaScore. These 5 tasks encompass the different dimensions along which persona agents can interact.</li>
+            <li>🧠 <strong>High Levels of Alignment with Human Judgement:</strong> Our experimentations show that PersonaGym is highly correlated with human judgment.</li>
             <li>📚 <strong>Comprehensive Benchmark:</strong> Introduced diverse benchmark containing 200 personas to facilitate research into LLMs' ability to be persona agents. </li>
           </ul>
         </div>
@@ -275,25 +275,25 @@ Additionally we propose <b>PersonaScore</b> which is the <i>first metric for qua
         <h2 class="title is-3 has-text-centered">Results Summary</h2>
         <div class="content has-text-centered">
           <p>
-            We introduce a benchmark of 200 diverse personas and evalaute 3 open source and 3 close source LLMs on these personas using PersonaGym including the SOTA Claude 3.5 Sonnet model. 
+            We introduce a benchmark of 200 diverse personas and evaluate 3 open source and 3 close source LLMs on these personas using PersonaGym including the SOTA Claude 3.5 Sonnet model. 
           </p>
         </div>
         <div class="image-container has-text-centered">
           <img src="static/images/main_results.jpg" alt="Results Summary Chart" class="image">
-          <figcaption> Benchmarked results of 6 LLMs on 200 personas descriptions and 10 questions per task totaling 10K questions. As part of PersonaGym we propose 5 evaluation tasks all of which are grounded in decision theory in order to properly evaluate persona agents on different axes of interactions with environments. Bolded results indicate the best scoring model for each task. Standard deviations for each task and model are included within parenthesis. The final row presents the variance among the average score for all 6 models for each task.</figcaption>
+          <figcaption> Benchmarked results of 6 LLMs on 200 personas descriptions and 10 questions per task totaling 10K questions. As part of PersonaGym, we propose 5 evaluation tasks all of which are grounded in decision theory to properly evaluate persona agents on different axes of interactions with environments. Bolded results indicate the best scoring model for each task. Standard deviations for each task and model are included within parentheses. The final row presents the variance among the average score for all 6 models for each task.</figcaption>
         </div>
         <div class="image-container has-text-centered">
           <img src="static/images/correlations.jpg" alt="correlations" class="image">
-          <figcaption> Average correlation scores across randomly sampled 100 personas between GPT 3.5, Llama2 (13b), and Llama2 (70b) models and human evaluation scores. In each entry, the format of the scores is Spearman / Kendall-Tau metrics. From our results, we show that PersonaScore is highly correlated with human judgement on the evaluation tasks, thereby giving evidence to the effectiveness of our proposed framework to evaluate LLM persona agents.</figcaption>
+          <figcaption> Average correlation scores across randomly sampled 100 personas between GPT 3.5, Llama2 (13b), and Llama2 (70b) models and human evaluation scores. In each entry, the format of the scores is Spearman / Kendall-Tau metrics. From our results, we show that PersonaScore is highly correlated with human judgment on the evaluation tasks, thereby giving evidence to the effectiveness of our proposed framework to evaluate LLM persona agents.</figcaption>
         </div>
         <div class="content has-text-left">
           <p>
             We make the following observations:
           </p>
           <ul>
-            <li><strong>The capacity of the model is positively correlated with the model's ability to be persona agents.</strong> This suggests that larger, more complex models may be better suited for tasks requiring the embodiment of specific personas or the simulation of distinct personalities.</li>
-            <li><strong>Not all SOTA LLMs are inclined to be persona agents.</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents. This finding should provide caution for future studies to carefully study the ability for all SOTA LLMs to be persona agents before deployment instead of assuming persona agent capabilities.</li>
-            <li><strong>PersonaGym is highly aligned with human judgement</strong> We show that the scores for all tasks and PersonaScore are highly correlated with human judgement thereby showing the efficacy of our framework </li>
+            <li><strong>The capacity of the model is positively correlated with the model's ability to be a persona agent.</strong> This suggests that larger, more complex models may be better suited for tasks requiring the embodiment of specific personas or the simulation of distinct personalities.</li>
+            <li><strong>Not all SOTA LLMs are inclined to be persona agents.</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents. This finding should provide caution for future studies to carefully study the ability of all SOTA LLMs to be persona agents before deployment instead of assuming persona agent capabilities.</li>
+            <li><strong>PersonaGym is highly aligned with human judgment </strong> We show that the scores for all tasks and PersonaScore are highly correlated with human judgment thereby showing the efficacy of our framework </li>
           </ul>
         </div>
       </div>
