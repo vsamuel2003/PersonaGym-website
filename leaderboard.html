@@ -202,19 +202,16 @@
               <p>If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
               <ol>
                 <li>Fork this repository.</li>
-                <li>Under the split that you evaluate on (evaluation/lite/ or evaluation/test), create a new folder with the submission date and the model name (e.g. 20240415_sweagent_gpt4).</li>
+                <li>Under the evaluation directory create a new folder with the submission date and the model name (e.g. 20240415_llama_2_70b).</li>
                 <li>Within the folder, please include the following files:
                   <ul>
-                    <li><code>all_preds.jsonl</code>: A JSONL file containing the predictions for the task instances in the split.</li>
-                    <li><code>results.json</code>: A JSON file containing the results of the evaluation, generated with <a href="https://example.com/get_model_report" target="_blank">get_model_report</a>.</li>
-                    <li><code>logs/</code>: A folder containing the execution logs for the model run.</li>
-                    <li><code>trajs/</code>: (For Agent-Based Approaches) A folder containing the trajectories for the model run, such as for SWE-agent.</li>
+                    <li><code>scores.json</code>: A JSON file containing the average score for all tasks in PersonaGym on our benchmark.</li>
                     <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
                   </ul>
                 </li>
                 <li>Create a pull request to this repository with the new folder.</li>
               </ol>
-              <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on PersonaGym.</p>
+              <p>The leaderboard will be updated every Monday.</p>
             </div>
 
 <footer class="footer">
