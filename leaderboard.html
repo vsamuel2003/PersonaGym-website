@@ -96,6 +96,15 @@
           <a href="index.html" class="button home-button is-rounded">Back to Home</a>
           <h1 class="title is-1 publication-title">PersonaGym Leaderboard</h1>
 
+           <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
+            <div style="background-color: black; padding: 1.5em 1em; color: white; border-radius: 1em; text-align: center; width: 100%;">
+                All official submissions to the PersonaGym leaderboard are maintained at
+                <a href="https://github.com/vsamuel2003/PersonaGym" class="light-blue-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> PersonaGym/experiments
+                </a>
+            </div>
+        </div>
+
           <!-- Leaderboard Table -->
           <table class="leaderboard-table">
             <thead>
@@ -175,41 +184,8 @@
             </tbody>
           </table>
           
-         <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
-            <div style="background-color: black; padding: 1.5em 1em; color: white; border-radius: 1em; text-align: center; width: 100%;">
-                All official submissions to the PersonaGym leaderboard are maintained at
-                <a href="https://github.com/vsamuel2003/PersonaGym" class="light-blue-link" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> PersonaGym/experiments
-                </a>
-            </div>
-        </div>
+        
 
-          <!-- Submission Box 
-          <div class="submission-box">
-            <h3>Submit to SWE-bench Leaderboard</h3>
-            <p>If you are interested in submitting your model to the <a href="https://github.com/SWE-bench/experiments" target="_blank">SWE-bench Leaderboard</a>, please do the following:</p>
-            <ol>
-              <li>Fork this repository.</li>
-              <li>Under the split that you evaluate on (<code>evaluation/lite/</code> or <code>evaluation/test/</code>), create a new folder with the submission date and the model name (e.g. <code>20240415_sweagent_gpt4</code>).</li>
-              <li>Within the folder, please include the following files:
-                <ul>
-                  <li><code>all_preds.jsonl</code>: A JSONL file containing the predictions for the task instances in the split.</li>
-                  <li><code>results.json</code>: A JSON file containing the results of the evaluation, generated with <a href="https://example.com/get_model_report" target="_blank">get_model_report</a>.</li>
-                  <li><code>logs/</code>: A folder containing the execution logs for the model run.</li>
-                  <li><code>trajs/</code>: (For Agent-Based Approaches) A folder containing the trajectories for the model run, such as for SWE-agent.</li>
-                  <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
-                </ul>
-              </li>
-              <li>Create a pull request to this repository with the new folder.</li>
-            </ol>
-            <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on SWE-bench.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
---->
           <div class="is-size-5 publication-authors">
             <p>Information on submitting to the leaderboard coming soon!</p>
             
@@ -232,17 +208,6 @@
               </ol>
               <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on PersonaGym.</p>
             </div>
-<!-- 
-            <div class="leaderboard-section">
-              <h2 class="subtitle"><strong>Submission Guidelines</strong></h2>
-              <p>Please note that we consider an eligible submission to the PersonaGym Leaderboard to satisfy these criteria:</p>
-              <ol>
-                <li>The use of the <code>hints_text</code> field is not allowed. See our explanation <a href="https://example.com/explanation" target="_blank">here</a>.</li>
-                <li>The result should be pass@1. There should be one execution log per task instance for all 2294 task instances.</li>
-                <li>The result should not be in the "Oracle" retrieval setting. The agent cannot be told the correct files to edit, where "correct" refers to the files modified by the reference solution patch.</li>
-              </ol>
-            </div>
-            --->
 
 
             
