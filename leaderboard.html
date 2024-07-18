@@ -20,9 +20,9 @@
   <script src="static/js/index.js"></script>
   <style>
     .leaderboard-wrapper {
-      border: 2px solid black; /* Black border around the leaderboard */
+      border: 2px solid black;
       padding: 20px;
-      background-color: white; /* Change background color to white */
+      background-color: white;
       border-radius: 10px;
       width: 100%; /* Make the leaderboard wider */
       margin: 0 auto; /* Center the leaderboard */
@@ -42,7 +42,7 @@
       text-align: left;
     }
     .leaderboard-section ol {
-      padding-left: 1.5em; /* Adjust padding to fit the numbers correctly */
+      padding-left: 1.5em;
     }
     .home-button {
       margin-bottom: 20px;
@@ -53,7 +53,6 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
-      /* Removed the grid lines */
     }
     .leaderboard-table th, .leaderboard-table td {
       padding: 8px;
@@ -61,12 +60,12 @@
     .leaderboard-table th {
       background-color: #f2f2f2;
       text-align: left;
-      font-size: 0.9em; /* Ensure text remains small */
-      font-family: 'Times New Roman', Times, serif; /* Change to a serif font */
+      font-size: 0.9em;
+      font-family: 'Times New Roman', Times, serif;
     }
     .leaderboard-table td {
       text-align: center;
-      font-size: 0.9em; /* Ensure text remains small */
+      font-size: 0.9em;
     }
     .leaderboard-table tr:nth-child(even) {
       background-color: #f9f9f9;
@@ -82,7 +81,7 @@
       padding: 10px;
       margin-bottom: 20px;
       background-color: #ffffff;
-      font-size: 0.9em; /* Ensure text remains small */
+      font-size: 0.9em;
     }
     .submission-box h3 {
       font-size: 1.2em;
@@ -91,14 +90,12 @@
     .submission-box p {
       margin: 5px 0;
     }
-    .date-cell {
-      font-size: 1.2em;
-      font-weight: bold;
-      background-color: #4A4A4A;
+    .label-date {
+      font-size: 1em;
+      background-color: black;
       color: white;
-      border-radius: 10px;
-      padding: 5px;
-      white-space: nowrap; /* Ensure date fits on one line */
+      padding: 0.2em 0.5em;
+      border-radius: 0.3em;
     }
   </style>
 </head>
@@ -142,7 +139,7 @@
               <tbody>
                 <tr>
                   <td>Claude 3.5 Sonnet 🥇</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>4.52</td>
                   <td>4.37</td>
                   <td>3.98</td>
@@ -152,7 +149,7 @@
                 </tr>
                 <tr>
                   <td>LLaMA-3 (8b) 🥈</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>4.55</td>
                   <td>4.43</td>
                   <td>3.97</td>
@@ -162,7 +159,7 @@
                 </tr>
                 <tr>
                   <td>LLaMA-2 (70b) 🥉</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>4.44</td>
                   <td>4.32</td>
                   <td>3.85</td>
@@ -172,7 +169,7 @@
                 </tr>
                 <tr>
                   <td>GPT-3.5</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>4.31</td>
                   <td>4.28</td>
                   <td>3.63</td>
@@ -182,7 +179,7 @@
                 </tr>
                 <tr>
                   <td>LLaMA-2 (13b)</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>3.96</td>
                   <td>3.87</td>
                   <td>3.77</td>
@@ -192,7 +189,7 @@
                 </tr>
                 <tr>
                   <td>Claude 3 Haiku</td>
-                  <td class="date-cell">2024-07-10</td>
+                  <td><span class="label-date">2024-07-10</span></td>
                   <td>2.47</td>
                   <td>4.28</td>
                   <td>3.04</td>
