@@ -19,8 +19,13 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <style>
+    .leaderboard-wrapper {
+      border: 2px solid black; /* Black border around the leaderboard */
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+    }
     .leaderboard-section {
-      border: 1px solid black;
       background-color: #f0f0f0;
       padding: 20px;
       margin-bottom: 20px;
@@ -107,89 +112,89 @@
         <br>
           <br>
 
-          <!-- Leaderboard Table -->
-          <table class="leaderboard-table">
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Date</th>
-                <th>Action Justification</th>
-                <th>Expected Action</th>
-                <th>Linguistic Habits</th>
-                <th>Persona Consistency</th>
-                <th>Toxicity Control</th>
-                <th>PersonaScore</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Claude 3.5 Sonnet 🥇</td>
-                <td>2024-07-10</td>
-                <td>4.52</td>
-                <td>4.37</td>
-                <td>3.98</td>
-                <td>4.81</td>
-                <td>4.88</td>
-                <td>4.51</td>
-              </tr>
-              <tr>
-                <td>LLaMA-3 (8b) 🥈</td>
-                <td>2024-07-10</td>
-                <td>4.55</td>
-                <td>4.43</td>
-                <td>3.97</td>
-                <td>4.77</td>
-                <td>4.74</td>
-                <td>4.49</td>
-              </tr>
-              <tr>
-                <td>LLaMA-2 (70b) 🥉</td>
-                <td>2024-07-10</td>
-                <td>4.44</td>
-                <td>4.32</td>
-                <td>3.85</td>
-                <td>4.67</td>
-                <td>4.68</td>
-                <td>4.39</td>
-              </tr>
-              <tr>
-                <td>GPT-3.5</td>
-                <td>2024-07-10</td>
-                <td>4.31</td>
-                <td>4.28</td>
-                <td>3.63</td>
-                <td>4.70</td>
-                <td>4.96</td>
-                <td>4.38</td>
-              </tr>
-              <tr>
-                <td>LLaMA-2 (13b)</td>
-                <td>2024-07-10</td>
-                <td>3.96</td>
-                <td>3.87</td>
-                <td>3.77</td>
-                <td>4.12</td>
-                <td>4.18</td>
-                <td>3.98</td>
-              </tr>
-              <tr>
-                <td>Claude 3 Haiku</td>
-                <td>2024-07-10</td>
-                <td>2.47</td>
-                <td>4.28</td>
-                <td>3.04</td>
-                <td>4.47</td>
-                <td>4.94</td>
-                <td>3.64</td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-          
-        
+          <!-- Leaderboard Wrapper -->
+          <div class="leaderboard-wrapper">
+            <!-- Leaderboard Table -->
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Date</th>
+                  <th>Action Justification</th>
+                  <th>Expected Action</th>
+                  <th>Linguistic Habits</th>
+                  <th>Persona Consistency</th>
+                  <th>Toxicity Control</th>
+                  <th>PersonaScore</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Claude 3.5 Sonnet 🥇</td>
+                  <td>2024-07-10</td>
+                  <td>4.52</td>
+                  <td>4.37</td>
+                  <td>3.98</td>
+                  <td>4.81</td>
+                  <td>4.88</td>
+                  <td>4.51</td>
+                </tr>
+                <tr>
+                  <td>LLaMA-3 (8b) 🥈</td>
+                  <td>2024-07-10</td>
+                  <td>4.55</td>
+                  <td>4.43</td>
+                  <td>3.97</td>
+                  <td>4.77</td>
+                  <td>4.74</td>
+                  <td>4.49</td>
+                </tr>
+                <tr>
+                  <td>LLaMA-2 (70b) 🥉</td>
+                  <td>2024-07-10</td>
+                  <td>4.44</td>
+                  <td>4.32</td>
+                  <td>3.85</td>
+                  <td>4.67</td>
+                  <td>4.68</td>
+                  <td>4.39</td>
+                </tr>
+                <tr>
+                  <td>GPT-3.5</td>
+                  <td>2024-07-10</td>
+                  <td>4.31</td>
+                  <td>4.28</td>
+                  <td>3.63</td>
+                  <td>4.70</td>
+                  <td>4.96</td>
+                  <td>4.38</td>
+                </tr>
+                <tr>
+                  <td>LLaMA-2 (13b)</td>
+                  <td>2024-07-10</td>
+                  <td>3.96</td>
+                  <td>3.87</td>
+                  <td>3.77</td>
+                  <td>4.12</td>
+                  <td>4.18</td>
+                  <td>3.98</td>
+                </tr>
+                <tr>
+                  <td>Claude 3 Haiku</td>
+                  <td>2024-07-10</td>
+                  <td>2.47</td>
+                  <td>4.28</td>
+                  <td>3.04</td>
+                  <td>4.47</td>
+                  <td>4.94</td>
+                  <td>3.64</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            
+          </div>
 
-          <div class="is-size-5 publication-authors">
-            <p>Information on submitting to the leaderboard coming soon!</p>
             
             <div class="leaderboard-section">
               <h2 class="subtitle"><strong>Submit to PersonaGym Leaderboard</strong></h2>
@@ -211,8 +216,6 @@
               <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on PersonaGym.</p>
             </div>
 
-
-            
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
