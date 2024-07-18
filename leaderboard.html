@@ -46,6 +46,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
+      border: 1px solid black; /* Added black border around the table */
     }
     .leaderboard-table th, .leaderboard-table td {
       border: 1px solid #ddd;
@@ -54,9 +55,11 @@
     .leaderboard-table th {
       background-color: #f2f2f2;
       text-align: left;
+      font-size: 0.9em; /* Ensure text remains small */
     }
     .leaderboard-table td {
       text-align: center;
+      font-size: 0.9em; /* Ensure text remains small */
     }
     .leaderboard-table tr:nth-child(even) {
       background-color: #f9f9f9;
@@ -66,6 +69,20 @@
     }
     .leaderboard-table .icon {
       color: #555;
+    }
+    .submission-box {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      font-size: 0.9em; /* Ensure text remains small */
+    }
+    .submission-box h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .submission-box p {
+      margin: 5px 0;
     }
   </style>
 </head>
@@ -157,6 +174,32 @@
               <!-- Add more rows as needed -->
             </tbody>
           </table>
+
+          <!-- Submission Box -->
+          <div class="submission-box">
+            <h3>Submit to SWE-bench Leaderboard</h3>
+            <p>If you are interested in submitting your model to the <a href="https://github.com/SWE-bench/experiments" target="_blank">SWE-bench Leaderboard</a>, please do the following:</p>
+            <ol>
+              <li>Fork this repository.</li>
+              <li>Under the split that you evaluate on (<code>evaluation/lite/</code> or <code>evaluation/test/</code>), create a new folder with the submission date and the model name (e.g. <code>20240415_sweagent_gpt4</code>).</li>
+              <li>Within the folder, please include the following files:
+                <ul>
+                  <li><code>all_preds.jsonl</code>: A JSONL file containing the predictions for the task instances in the split.</li>
+                  <li><code>results.json</code>: A JSON file containing the results of the evaluation, generated with <a href="https://example.com/get_model_report" target="_blank">get_model_report</a>.</li>
+                  <li><code>logs/</code>: A folder containing the execution logs for the model run.</li>
+                  <li><code>trajs/</code>: (For Agent-Based Approaches) A folder containing the trajectories for the model run, such as for SWE-agent.</li>
+                  <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
+                </ul>
+              </li>
+              <li>Create a pull request to this repository with the new folder.</li>
+            </ol>
+            <p>You can refer to this <a href="https://example.com/tutorial" target="_blank">tutorial</a> for a quick overview of how to evaluate your model on SWE-bench.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
           <div class="is-size-5 publication-authors">
             <p>Information on submitting to the leaderboard coming soon!</p>
