@@ -197,6 +197,7 @@
 
             <br>
           <br>
+          <!--
             <div class="leaderboard-section">
               <h2 class="subtitle"><strong>Submit to PersonaGym Leaderboard</strong></h2>
               <p>If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
@@ -213,6 +214,25 @@
               </ol>
               <p>The leaderboard will be updated every Monday.</p>
             </div>
+          -->
+
+          <div class="leaderboard-section" style="font-size: 18px; line-height: 1.6;">
+            <h2 class="subtitle" style="font-size: 24px; line-height: 1.6;"><strong>Submit to PersonaGym Leaderboard</strong></h2>
+            <p style="font-size: 18px; line-height: 1.6;">If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
+            <ol style="font-size: 18px; line-height: 1.6;">
+                <li>Fork this repository.</li>
+                <li>Under the evaluation directory create a new folder with the submission date and the model name (e.g. 20240415_llama_2_70b).</li>
+                <li>Within the folder, please include the following files:
+                    <ul style="font-size: 18px; line-height: 1.6;">
+                        <li><code>scores.json</code>: A JSON file containing the average score for all tasks in PersonaGym on our benchmark.</li>
+                        <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
+                    </ul>
+                </li>
+                <li>Create a pull request to this repository with the new folder.</li>
+            </ol>
+            <p style="font-size: 18px; line-height: 1.6;">The leaderboard will be updated every Monday.</p>
+        </div>
+
 
 <footer class="footer">
   <div class="container">
