@@ -69,6 +69,10 @@
       text-align: left;
       font-size: 0.9em;
       font-family: 'Times New Roman', Times, serif;
+      cursor: pointer;
+    }
+    .leaderboard-table th:hover {
+      background-color: #e0e0e0;
     }
     .leaderboard-table td {
       text-align: center;
@@ -117,6 +121,10 @@
       padding: 0.2em 0.5em;
       border-radius: 0.3em;
     }
+    .highest-score {
+      font-weight: bold;
+      color: #007bff;
+    }
   </style>
 </head>
 <body>
@@ -144,17 +152,17 @@
           <div class="leaderboard-container">
             <div class="leaderboard-wrapper">
               <!-- Leaderboard Table -->
-              <table class="leaderboard-table">
+              <table class="leaderboard-table" id="leaderboardTable">
                 <thead>
                   <tr>
-                    <th>Model</th>
-                    <th>Date</th>
-                    <th>Action Justification</th>
-                    <th>Expected Action</th>
-                    <th>Linguistic Habits</th>
-                    <th>Persona Consistency</th>
-                    <th>Toxicity Control</th>
-                    <th>PersonaScore</th>
+                    <th onclick="sortTable(0)">Model</th>
+                    <th onclick="sortTable(1)">Date</th>
+                    <th onclick="sortTable(2)">Action Justification</th>
+                    <th onclick="sortTable(3)">Expected Action</th>
+                    <th onclick="sortTable(4)">Linguistic Habits</th>
+                    <th onclick="sortTable(5)">Persona Consistency</th>
+                    <th onclick="sortTable(6)">Toxicity Control</th>
+                    <th onclick="sortTable(7)">PersonaScore</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -261,6 +269,62 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function highlightHighestScores() {
+    const table = document.getElementById('leaderboardTable');
+    const rows = table.getElementsByTagName('tr');
+    const numCols = rows[0].cells.length;
+
+    for (let col = 2; col < numCols; col++) {
+      let highestScore = -Infinity;
+      let highestScoreElements = [];
+
+      for (let row = 1; row < rows.length; row++) {
+        const cell = rows[row].cells[col];
+        const score = parseFloat(cell.textContent);
+        
+        if (score > highestScore) {
+          highestScore = score;
+          highestScoreElements = [cell];
+        } else if (score === highestScore) {
+          highestScoreElements.push(cell);
+        }
+      }
+
+      highestScoreElements.forEach(element => {
+        element.classList.add('highest-score');
+      });
+    }
+  }
+
+  function sortTable(column) {
+    const table = document.getElementById('leaderboardTable');
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.rows);
+
+    const sortedRows = rows.sort((a, b) => {
+      let aValue = a.cells[column].textContent.trim();
+      let bValue = b.cells[column].textContent.trim();
+
+      if (column === 0) {
+        // Sort by model name
+        return aValue.localeCompare(bValue);
+      } else if (column === 1) {
+        // Sort by date
+        return new Date(aValue) - new Date(bValue);
+      } else {
+        // Sort by score (numeric)
+        return parseFloat(bValue) - parseFloat(aValue);
+      }
+    });
+
+    sortedRows.forEach(row => tbody.appendChild(row));
+  }
+
+  // Call the function to highlight highest scores when the page loads
+  window.onload = highlightHighestScores;
+</script>
 
 </body>
 </html>
