@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">PersonaGym: Towards evaluating persona agents in LLMs</h1>
+            <h1 class="title is-1 publication-title">PersonaGym: Evaluating Persona Agents and LLMs</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block-1">
@@ -157,7 +157,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            The emergence of persona agents in large language models (LLMs) has introduced a novel approach where the LLM assumes a specified persona, generating responses that align with the experiences and traits of that persona. These <strong>Persona Agents </strong> have the potential to deliver highly personalized and contextually relevant interactions, enhancing user engagement and satisfaction by simulating human-like communication and decision-making across a multitude of domains.
+            The emergence of persona agents in large language models (LLMs) has introduced a novel approach where the LLM assumes a specified persona and generates responses that align with the experiences and traits of that persona. These <strong>Persona Agents </strong> have the potential to deliver highly personalized and contextually relevant interactions, enhancing user engagement and satisfaction by simulating human-like communication and decision-making across a multitude of domains.
           </p>
         </div>
       </div>
@@ -206,7 +206,7 @@
           <p>
             <b>PersonaGym</b> is the first dynamic evaluation framework for persona agents. As part of PersonaGym, we evaluate persona agents on the tasks of <b>Action Justification</b>, <b>Expected Action</b>, <b>Linguistic Habits</b>, <b>Persona Consistency</b>, and <b>Toxicity Control</b>.  By dynamic we mean that for every given persona agent, PersonaGym chooses relevant environments from a list of 150 diverse environments and generates task-specific questions tailored to the given persona and the selected environments. The agent's responses to these questions are then automatically evaluated using an ensemble of strong LLM models.  
 
-Additionally, we propose <b>PersonaScore</b> which is the <i>first metric for quantifying the overall capability of persona agents</i>. Our framework provides comprehensive scores across all tasks along with PersonaScore to enable <i>multidimensional persona agent evaluation and advancement</i>. 
+Additionally, we propose <b>PersonaScore</b> which is the <i>first automatic human-aligned metric for quantifying the overall capability of persona agents</i>. Our framework provides comprehensive scores across all tasks along with PersonaScore to enable <i>multidimensional persona agent evaluation and advancement</i>. 
           </p>
         </div>
       </div>
@@ -301,8 +301,8 @@ Additionally, we propose <b>PersonaScore</b> which is the <i>first metric for qu
             We make the following observations:
           </p>
           <ul>
-            <li><strong>The capacity of the model is positively correlated with the model's ability to be a persona agent.</strong> This suggests that larger, more complex models may be better suited for tasks requiring the embodiment of specific personas or the simulation of distinct personalities.</li>
-            <li><strong>Not all SOTA LLMs are inclined to be persona agents.</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents. This finding should provide caution for future studies to carefully study the ability of all SOTA LLMs to be persona agents before deployment instead of assuming persona agent capabilities.</li>
+            <li><strong>There exits significant opportunity for advancement of persona agent capabilities </strong> We observe that SOTA models do not outperform less capable models at the level they do in other domains. For example, Claude 3.5 Sonnet only has a 2.97% relative improvement in PersonaScore than GPT 3.5 despite being a much more advanced model. </li>
+            <li><strong>Size and capability of models is not a direct indication of persona agent capabilities</strong> We show that Claude 3 Haiku is very resistant to taking on personas and being persona agents despite being a SOTA model. This finding highlights the pressing need for algorithmic and architectural invention towards faithful and performant persona agents.</li>
             <li><strong>PersonaGym is highly aligned with human judgment </strong> We show that the scores for all tasks and PersonaScore are highly correlated with human judgment thereby showing the efficacy of our framework </li>
           </ul>
         </div>
