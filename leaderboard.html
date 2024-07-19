@@ -57,7 +57,7 @@
       color: white;
     }
     .leaderboard-table {
-      width: 120%;
+      width: 100%;
       border-collapse: collapse;
       margin: 0 auto;
     }
@@ -83,6 +83,19 @@
     .leaderboard-table .icon {
       color: #555;
     }
+    .leaderboard-table th:nth-child(2),
+    .leaderboard-table td:nth-child(2) {
+      width: 120px;
+      min-width: 120px;
+    }
+    .leaderboard-table th:first-child,
+    .leaderboard-table td:first-child {
+      width: 20%;
+    }
+    .leaderboard-table th:not(:first-child):not(:nth-child(2)),
+    .leaderboard-table td:not(:first-child):not(:nth-child(2)) {
+      width: 10%;
+    }
     .submission-box {
       border: 1px solid black;
       padding: 10px;
@@ -99,7 +112,7 @@
     }
     .label-date {
       font-size: 1em;
-      background-color: #333; /* Change to dark gray */
+      background-color: #333;
       color: white;
       padding: 0.2em 0.5em;
       border-radius: 0.3em;
@@ -205,7 +218,6 @@
                     <td>4.94</td>
                     <td>3.64</td>
                   </tr>
-                  <!-- Add more rows as needed -->
                 </tbody>
               </table>
             </div>
@@ -230,7 +242,10 @@
             </ol>
             <p style="font-size: 18px; line-height: 1.6;">The leaderboard will be updated every Monday.</p>
         </div>
-
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
