@@ -167,7 +167,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Claude 3.5 Sonnet 🥇</td>
+                    <td>Claude 3.5 Sonnet</td>
                     <td><span class="label-date">2024-07-10</span></td>
                     <td>4.52</td>
                     <td>4.37</td>
@@ -177,7 +177,7 @@
                     <td>4.51</td>
                   </tr>
                   <tr>
-                    <td>LLaMA-3 (8b) 🥈</td>
+                    <td>LLaMA-3 (8b)</td>
                     <td><span class="label-date">2024-07-10</span></td>
                     <td>4.55</td>
                     <td>4.43</td>
@@ -187,7 +187,7 @@
                     <td>4.49</td>
                   </tr>
                   <tr>
-                    <td>LLaMA-2 (70b) 🥉</td>
+                    <td>LLaMA-2 (70b)</td>
                     <td><span class="label-date">2024-07-10</span></td>
                     <td>4.44</td>
                     <td>4.32</td>
@@ -271,6 +271,24 @@
 </footer>
 
 <script>
+  function updateMedals(column) {
+    const table = document.getElementById('leaderboardTable');
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.rows);
+  
+    // Remove existing medals
+    rows.forEach(row => {
+      const modelCell = row.cells[0];
+      modelCell.textContent = modelCell.textContent.replace(/🥇|🥈|🥉/g, '').trim();
+    });
+  
+    // Assign new medals based on the current sorting
+    const medals = ['🥇', '🥈', '🥉'];
+    for (let i = 0; i < Math.min(3, rows.length); i++) {
+      const modelCell = rows[i].cells[0];
+      modelCell.textContent = `${medals[i]} ${modelCell.textContent}`;
+    }
+  }
   function highlightHighestScores() {
     const table = document.getElementById('leaderboardTable');
     const rows = table.getElementsByTagName('tr');
@@ -320,10 +338,14 @@
     });
 
     sortedRows.forEach(row => tbody.appendChild(row));
+    updateMedals(column);
   }
 
   // Call the function to highlight highest scores when the page loads
-  window.onload = highlightHighestScores;
+  window.onload = function() {
+  highlightHighestScores();
+  updateMedals(7); // Start with PersonaScore column (index 7)
+};
 </script>
 
 </body>
