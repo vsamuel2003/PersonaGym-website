@@ -24,8 +24,11 @@
       padding: 20px;
       background-color: white;
       border-radius: 10px;
-      width: fit-content;
       margin: 0 auto; /* Center the leaderboard */
+    }
+    .leaderboard-container {
+      display: flex;
+      justify-content: center;
     }
     .leaderboard-section {
       background-color: #f0f0f0;
@@ -50,6 +53,7 @@
       color: white;
     }
     .leaderboard-table {
+      width: 120%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
@@ -108,120 +112,103 @@
           <a href="index.html" class="button home-button is-rounded">Back to Home</a>
           <h1 class="title is-1 publication-title">PersonaGym Leaderboard</h1>
 
-           <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
+          <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
             <div style="background-color: black; padding: 1.5em 1em; color: white; border-radius: 1em; text-align: center; width: 100%;">
                 All official submissions to the PersonaGym leaderboard are maintained at
                 <a href="https://github.com/vsamuel2003/PersonaGym" class="light-blue-link" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i> PersonaGym/evaluations
                 </a>
             </div>
-        </div>
-        <br>
+          </div>
+          <br>
           <br>
 
           <!-- Leaderboard Wrapper -->
-          <div class="leaderboard-wrapper">
-            <!-- Leaderboard Table -->
-            <table class="leaderboard-table">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Date</th>
-                  <th>Action Justification</th>
-                  <th>Expected Action</th>
-                  <th>Linguistic Habits</th>
-                  <th>Persona Consistency</th>
-                  <th>Toxicity Control</th>
-                  <th>PersonaScore</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Claude 3.5 Sonnet 🥇</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>4.52</td>
-                  <td>4.37</td>
-                  <td>3.98</td>
-                  <td>4.81</td>
-                  <td>4.88</td>
-                  <td>4.51</td>
-                </tr>
-                <tr>
-                  <td>LLaMA-3 (8b) 🥈</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>4.55</td>
-                  <td>4.43</td>
-                  <td>3.97</td>
-                  <td>4.77</td>
-                  <td>4.74</td>
-                  <td>4.49</td>
-                </tr>
-                <tr>
-                  <td>LLaMA-2 (70b) 🥉</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>4.44</td>
-                  <td>4.32</td>
-                  <td>3.85</td>
-                  <td>4.67</td>
-                  <td>4.68</td>
-                  <td>4.39</td>
-                </tr>
-                <tr>
-                  <td>GPT-3.5</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>4.31</td>
-                  <td>4.28</td>
-                  <td>3.63</td>
-                  <td>4.70</td>
-                  <td>4.96</td>
-                  <td>4.38</td>
-                </tr>
-                <tr>
-                  <td>LLaMA-2 (13b)</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>3.96</td>
-                  <td>3.87</td>
-                  <td>3.77</td>
-                  <td>4.12</td>
-                  <td>4.18</td>
-                  <td>3.98</td>
-                </tr>
-                <tr>
-                  <td>Claude 3 Haiku</td>
-                  <td><span class="label-date">2024-07-10</span></td>
-                  <td>2.47</td>
-                  <td>4.28</td>
-                  <td>3.04</td>
-                  <td>4.47</td>
-                  <td>4.94</td>
-                  <td>3.64</td>
-                </tr>
-                <!-- Add more rows as needed -->
-              </tbody>
-            </table>
-            
+          <div class="leaderboard-container">
+            <div class="leaderboard-wrapper">
+              <!-- Leaderboard Table -->
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Date</th>
+                    <th>Action Justification</th>
+                    <th>Expected Action</th>
+                    <th>Linguistic Habits</th>
+                    <th>Persona Consistency</th>
+                    <th>Toxicity Control</th>
+                    <th>PersonaScore</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Claude 3.5 Sonnet 🥇</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>4.52</td>
+                    <td>4.37</td>
+                    <td>3.98</td>
+                    <td>4.81</td>
+                    <td>4.88</td>
+                    <td>4.51</td>
+                  </tr>
+                  <tr>
+                    <td>LLaMA-3 (8b) 🥈</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>4.55</td>
+                    <td>4.43</td>
+                    <td>3.97</td>
+                    <td>4.77</td>
+                    <td>4.74</td>
+                    <td>4.49</td>
+                  </tr>
+                  <tr>
+                    <td>LLaMA-2 (70b) 🥉</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>4.44</td>
+                    <td>4.32</td>
+                    <td>3.85</td>
+                    <td>4.67</td>
+                    <td>4.68</td>
+                    <td>4.39</td>
+                  </tr>
+                  <tr>
+                    <td>GPT-3.5</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>4.31</td>
+                    <td>4.28</td>
+                    <td>3.63</td>
+                    <td>4.70</td>
+                    <td>4.96</td>
+                    <td>4.38</td>
+                  </tr>
+                  <tr>
+                    <td>LLaMA-2 (13b)</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>3.96</td>
+                    <td>3.87</td>
+                    <td>3.77</td>
+                    <td>4.12</td>
+                    <td>4.18</td>
+                    <td>3.98</td>
+                  </tr>
+                  <tr>
+                    <td>Claude 3 Haiku</td>
+                    <td><span class="label-date">2024-07-10</span></td>
+                    <td>2.47</td>
+                    <td>4.28</td>
+                    <td>3.04</td>
+                    <td>4.47</td>
+                    <td>4.94</td>
+                    <td>3.64</td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
           </div>
 
-            <br>
           <br>
-          <!--
-            <div class="leaderboard-section">
-              <h2 class="subtitle"><strong>Submit to PersonaGym Leaderboard</strong></h2>
-              <p>If you are interested in submitting your model to the PersonaGym Leaderboard, please do the following:</p>
-              <ol>
-                <li>Fork this repository.</li>
-                <li>Under the evaluation directory create a new folder with the submission date and the model name (e.g. 20240415_llama_2_70b).</li>
-                <li>Within the folder, please include the following files:
-                  <ul>
-                    <li><code>scores.json</code>: A JSON file containing the average score for all tasks in PersonaGym on our benchmark.</li>
-                    <li><code>README.md</code>: (Recommended) Include anything you'd like to share about your model here!</li>
-                  </ul>
-                </li>
-                <li>Create a pull request to this repository with the new folder.</li>
-              </ol>
-              <p>The leaderboard will be updated every Monday.</p>
-            </div>
-          -->
+          <br>
 
           <div class="leaderboard-section" style="font-size: 18px; line-height: 1.6;">
             <h2 class="subtitle" style="font-size: 24px; line-height: 1.6;"><strong>Submit to PersonaGym Leaderboard</strong></h2>
